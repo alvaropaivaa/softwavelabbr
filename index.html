@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTWAVE - Soluções Digitais e Inovação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #8B5CF6; 
+            --color-secondary: #4F46E5; 
+            --color-icon: #A78BFA; 
+            --color-dark-blue: #0A1437; 
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1117; 
+            color: #e5e7eb;
+            overflow-x: hidden; 
+        }
+        #hero, header {
+            background-color: var(--color-dark-blue) !important;
+        }
+        .bg-gray-900 {
+            background-color: #0d1117; 
+        }
+        .bg-[#1f2937] {
+             background-color: #1f2937;
+        }
+        .bg-[#0d1117] {
+             background-color: #0d1117;
+        }
+
+        .gradient-text {
+            background-image: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .primary-icon {
+            color: var(--color-icon); 
+        }
+        .card-service {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #1f2937; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            height: 100%;
+            border-radius: 1rem;
+            border: 1px solid rgba(75, 85, 99, 0.5); 
+        }
+        .card-service-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+            border-color: var(--color-primary);
+        }
+        .service-list {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            padding: 0 1rem;
+        }
+        .service-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #ccc;
+        }
+        .service-list li svg {
+            margin-right: 0.5rem;
+            min-width: 1rem;
+            color: var(--color-icon);
+        }
+        .highlight-card {
+            background-color: #1f2937; 
+            transition: background-color 0.3s ease;
+            border-radius: 0.75rem;
+        }
+        .highlight-card:hover {
+            background-color: #2a3542;
+        }
+        
+        @keyframes subtle-pulse {
+            0% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.02); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.95; }
+        }
+        #logo-header {
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); } 
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            animation: fadeInUp 1s cubic-bezier(0.19, 1, 0.22, 1) forwards; 
+        }
+        
+        .newsletter-input {
+            background-color: #374151;
+            border: 1px solid #4b5563;
+            color: #ffffff;
+            transition: all 0.2s;
+            padding: 0.75rem 1rem;
+            width: 100%;
+            border-radius: 0.75rem;
+        }
+        .newsletter-input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 1px var(--color-primary);
+        }
+        .contact-icon {
+            color: var(--color-icon);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center space-x-0">
+                    <img id="logo-header" src="Design sem nome (11) (1) - Editado.png" alt="Logo Softwave Lab" class="w-32 h-32 object-contain md:w-56 md:h-56"> 
+                </a>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://api.whatsapp.com/send?phone=85994534994&text=Ol%C3%A1%2C%20entramos%20em%20contato%20com%20a%20Softwave%20atrav%C3%A9s%20do%20site%20para%20solicitar%20mais%20informa%C3%A7%C3%B5es%20gerais%20sobre%20os%20servi%C3%A7os." target="_blank" class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium py-1.5 px-2 rounded-full transition duration-300 transform hover:scale-105 whitespace-nowrap text-[10px] 
+                                         md:text-sm md:font-bold md:py-2.5 md:px-5">
+                        ENTRAR EM CONTATO
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="pt-12 pb-12 md:pt-32 md:pb-24 text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-4 animate-on-scroll" data-delay="0.0">AGÊNCIA DE INOVAÇÃO DIGITAL</p>
+                <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-12 animate-on-scroll" data-delay="0.1">
+                    Tudo o que você precisa para <span class="gradient-text">Inovar e Dominar</span> o Mercado.
+                </h1>
+                <a href="https://api.whatsapp.com/send?phone=85994534994&text=Ol%C3%A1%2C%20entramos%20em%20contato%20com%20a%20Softwave%20atrav%C3%A9s%20do%20site%20para%20solicitar%20mais%20informa%C3%A7%C3%B5es%20gerais%20sobre%20os%20servi%C3%A7os." target="_blank" class="bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 text-white text-base font-bold py-2 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 inline-block animate-on-scroll md:text-lg md:py-3 md:px-8" data-delay="0.2">
+                    CONQUISTE SEU SERVIÇO AGORA
+                </a>
+            </div>
+        </section>
+
+        <section id="highlights" class="py-12 border-b border-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    
+                    <div class="highlight-card p-4 md:p-6 rounded-xl text-center shadow-lg animate-on-scroll" data-delay="0.0">
+                        <div class="w-10 h-10 mx-auto mb-2 primary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <p class="text-sm md:text-base font-medium text-gray-300 uppercase">SERVIÇO DE EXCELÊNCIA</p>
+                    </div>
+
+                    <div class="highlight-card p-4 md:p-6 rounded-xl text-center shadow-lg animate-on-scroll" data-delay="0.1">
+                        <div class="w-10 h-10 mx-auto mb-2 primary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M16 4h-4"/><path d="M12 4h-4"/><path d="M8 4H4"/><path d="M16 20h-4"/><path d="M12 20h-4"/><path d="M8 20H4"/><path d="M20 4v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <p class="text-sm md:text-base font-medium text-gray-300 uppercase">ORÇAMENTOS JUSTOS</p>
+                    </div>
+
+                    <div class="highlight-card p-4 md:p-6 rounded-xl text-center shadow-lg animate-on-scroll" data-delay="0.2">
+                        <div class="w-10 h-10 mx-auto mb-2 primary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M17 19c-1.5 0-3-.5-4-1.5s-2.5-1.5-4-1.5s-3 .5-4 1.5M12 20V4"/><path d="M18 6l-6-6-6 6"/><path d="M12 18v6"/></svg>
+                        </div>
+                        <p class="text-sm md:text-base font-medium text-gray-300 uppercase">TIME EXPERIENTE</p>
+                    </div>
+
+                    <div class="highlight-card p-4 md:p-6 rounded-xl text-center shadow-lg animate-on-scroll" data-delay="0.3">
+                        <div class="w-10 h-10 mx-auto mb-2 primary-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <p class="text-sm md:text-base font-medium text-gray-300 uppercase">SUPORTE EXCELENTE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-4 animate-on-scroll" data-delay="0.0">
+                    NOSSOS <span class="gradient-text">SERVIÇOS</span>
+                </h2>
+                <p class="text-center text-gray-400 max-w-xl mx-auto mb-16 animate-on-scroll" data-delay="0.1">
+                    Oferecemos um portfólio completo de soluções de ponta para automatizar e otimizar o seu negócio no ambiente digital.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="card-service p-6 rounded-xl border border-gray-700 shadow-xl animate-on-scroll" data-delay="0.2">
+                        <div class="card-service-content">
+                            <div class="w-8 h-8 md:w-12 md:h-12 mb-4 primary-icon"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M7.7 13.5l-3-3L10.5 7.7 13.5 10.7 7.7 13.5z"/><path d="M13.5 10.7l3-3L20.3 13.5 17.3 16.5 13.5 10.7z"/><path d="M7.7 13.5l3 3L17.3 13.5 14.3 10.5 7.7 13.5z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4 12H2"/><path d="M22 12h-2"/></svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-1">Criação de Websites</h3>
+                            <p class="text-gray-400 text-sm mb-6">
+                                Design Moderno, rápido e responsivo
+                            </p>
+                            <ul class="service-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Atrai mais clientes online
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Aumenta a credibilidade da empresa
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Facilita o contato e pedidos
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Melhora a posição no Google
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Praticidade para atualizar conteúdo
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Design moderno e personalizado
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://api.whatsapp.com/send?phone=85994534994&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%3A%20Cria%C3%A7%C3%A3o%20de%20Websites." target="_blank" class="mt-auto bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 text-white font-medium py-2.5 px-6 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                            GARANTIR SERVIÇO
+                        </a>
+                        <p class="text-gray-500 text-xs mt-2">@softwave_lab</p>
+
+                    </div>
+
+                    <div class="card-service p-6 rounded-xl border border-gray-700 shadow-xl animate-on-scroll" data-delay="0.3">
+                        <div class="card-service-content">
+                            <div class="w-8 h-8 md:w-12 md:h-12 mb-4 primary-icon"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-1">Apps e Sistemas</h3>
+                            <p class="text-gray-400 text-sm mb-6">
+                                Facilitando e otimizando sua empresa
+                            </p>
+                            <ul class="service-list">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Apps para Android e iOS
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Sistemas personalizados para automação e gestão
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Integração com bancos de dados e APIs
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Soluções sob medida para o negócio
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Otimização de processos internos
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg>
+                                    Melhor interface para o Cliente.
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://api.whatsapp.com/send?phone=85994534994&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%3A%20Apps%20e%20Sistemas." target="_blank" class="mt-auto bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 text-white font-medium py-2.5 px-6 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                            GARANTIR SERVIÇO
+                        </a>
+                        <p class="text-gray-500 text-xs mt-2">@softwave_lab</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20 border-t border-b border-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    
+                    <div class="lg:order-1 order-2 text-center lg:text-left animate-on-scroll" data-delay="0.4">
+                        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-4">POR QUE NOS ESCOLHER?</p>
+                        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+                            Criamos experiências, <span class="gradient-text">entregamos resultados.</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 max-w-xl mx-auto lg:mx-0 mb-8 text-lg">
+                            Nosso compromisso com a qualidade e a excelência é inigualável. Desde o primeiro planejamento até a entrega final, garantimos que cada etapa do processo seja executada com perfeição. Com a Softwave, você não está apenas contratando um serviço – está conquistando um parceiro dedicado ao crescimento e sucesso do seu negócio.
+                        </p>
+                        
+                        <div class="space-y-6 mb-12 max-w-sm mx-auto lg:mx-0">
+                            <div class="flex flex-col items-center sm:items-start text-center sm:text-left animate-on-scroll" data-delay="0.5">
+                                <div class="text-5xl font-extrabold gradient-text mb-2">
+                                    <span id="years-of-experience-counter">0</span>+
+                                </div>
+                                <p class="text-sm font-medium text-gray-300 uppercase tracking-wider">ANOS DE EXPERIÊNCIA</p>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 text-left animate-on-scroll" data-delay="0.6">
+                                <svg class="w-6 h-6 primary-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="7" rx="2" ry="2"/><path d="M10 17h4"/><path d="M12 7V4"/></svg>
+                                <p class="text-base font-medium text-gray-300">SOLUÇÕES DIGITAIS</p>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 text-left animate-on-scroll" data-delay="0.7">
+                                <svg class="w-6 h-6 primary-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4"/><path d="M17 17l-5 5-5-5"/><path d="M4 17h16"/></svg>
+                                <p class="text-base font-medium text-gray-300">ESTRATÉGIAS PARA SUA EMPRESA</p>
+                            </div>
+
+                            <div class="flex items-center space-x-3 text-left animate-on-scroll" data-delay="0.8">
+                                <svg class="w-6 h-6 primary-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16l-4-4-4 4"/></svg>
+                                <p class="text-base font-medium text-gray-300">ORÇAMENTO JUSTO</p>
+                            </div>
+                        </div>
+
+                        <div class="w-full max-w-xs mx-auto lg:mx-0 animate-on-scroll" data-delay="0.9">
+                            <a href="https://api.whatsapp.com/send?phone=85994534994&text=Ol%C3%A1%2C%20entramos%20em%20contato%20com%20a%20Softwave%20atrav%C3%A9s%20do%20site%20para%20solicitar%20mais%20informa%C3%A7%C3%B5es%20gerais%20sobre%20os%20servi%C3%A7os." target="_blank" class="w-full block bg-transparent border-2 border-indigo-500 text-white text-lg font-bold py-3 px-8 rounded-full transition duration-300 hover:bg-indigo-500/20">
+                                GARANTIR SERVIÇO
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:order-2 order-1 flex justify-center items-center p-6 md:p-0 animate-on-scroll" data-delay="0.4">
+                        <img src="Pop-up De Saída Da Hotmart Curso Online Treino Fitness Em Casa Verde E Preto - 1 - Editado (2).png" alt="Símbolo da Softwave Lab" class="w-full max-w-2xl h-auto object-contain opacity-100">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer id="contato" class="bg-[#1f2937] border-t border-gray-700 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-4 md:space-y-0 pb-6 md:pb-0 border-b md:border-b-0 border-gray-700 md:border-none">
+                    <a href="#" class="flex items-center space-x-0 mb-2">
+                        <img id="logo-footer" src="Design sem nome (11) (1) - Editado.png" alt="Logo Softwave Lab" class="w-48 h-48 object-contain">
+                    </a>
+                    <p class="text-gray-400 text-sm">AGÊNCIA DE INOVAÇÃO DIGITAL</p>
+                </div>
+
+                <div class="p-6 md:p-0 space-y-4 md:space-y-0 pb-6 md:pb-0 border-b md:border-b-0 border-gray-700 md:border-none">
+                    <h4 class="text-lg font-bold mb-4 text-white uppercase tracking-wider">CONTACT INFO</h4>
+                    <div class="space-y-4 text-sm text-gray-400">
+                        <p class="flex items-center space-x-3 justify-center md:justify-start">
+                             <svg class="w-5 h-5 contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18c-3.3 0-6-2.7-6-6S8.7 6 12 6s6 2.7 6 6-2.7 6-6 6zm0 2c4.4 0 8-3.6 8-8s-3.6-8-8-8-8 3.6-8 8 3.6 8 8 8z"/></svg>
+                             <span>Fortaleza, CE</span>
+                        </p>
+                        <p class="flex items-center space-x-3 justify-center md:justify-start">
+                             <svg class="w-5 h-5 contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-5.6-5.6A19.79 19.79 0 0 1 2.08 6.18a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.58 1.42l-2.8 2.8a1 1 0 0 0 .32 1.63L10 16l3.5 3.5a1 1 0 0 0 1.63.32l2.8-2.8a2 2 0 0 1 1.42-.58h3a2 2 0 0 1 2 2z"/></svg>
+                             <span>85 99453-4994</span>
+                        </p>
+                        <p class="flex items-center space-x-3 justify-center md:justify-start">
+                             <svg class="w-5 h-5 contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                             <span>softwavelab.br@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-0 text-center md:text-left">
+                    
+                    <h4 class="text-lg font-bold mb-4 text-white uppercase tracking-wider pb-2">NEWSLETTER</h4>
+                    
+                    <div class="space-y-3 max-w-xs mx-auto md:max-w-none md:mx-0">
+                        <p class="text-sm font-normal mt-2 mb-4 text-gray-400">Registre seu email para receber nossas atualizações.</p>
+                        
+                        <input id="newsletter-input" type="email" placeholder="Your email address..." required class="newsletter-input">
+                        
+                        <button type="submit" id="newsletter-button" class="w-full bg-transparent text-white py-3 font-semibold transition duration-300 rounded-full border border-indigo-500 hover:bg-indigo-500/10 mt-4">
+                            SUBSCRIBE
+                        </button>
+                        <p id="newsletter-status" class="text-green-400 text-sm pt-2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center border-t border-gray-700 pt-8 mt-8">
+                <p class="text-gray-500 text-sm">© 2025 SOFTWAVE. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoHeader = document.getElementById('logo-header');
+            const logoFooter = document.getElementById('logo-footer');
+            const yearsOfExperienceCounter = document.getElementById('years-of-experience-counter');
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+            const addHoverEffect = (element) => {
+                if (element) {
+                    element.addEventListener('mouseenter', () => element.style.transform = 'scale(1.05) rotate(2deg)');
+                    element.addEventListener('mouseleave', () => element.style.transform = 'scale(1) rotate(0deg)');
+                    element.style.transition = 'transform 0.3s ease';
+                }
+            };
+
+            addHoverEffect(logoHeader);
+            addHoverEffect(logoFooter);
+
+            const newsletterButton = document.getElementById('newsletter-button');
+            const newsletterInput = document.getElementById('newsletter-input');
+            const newsletterStatus = document.getElementById('newsletter-status');
+
+            if (newsletterButton) {
+                newsletterButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const email = newsletterInput.value;
+                    if (email && email.includes('@') && email.includes('.')) {
+                        newsletterStatus.textContent = 'Assinado! Em breve, novidades no seu email.';
+                        newsletterInput.value = '';
+                        newsletterStatus.classList.remove('text-red-400');
+                        newsletterStatus.classList.add('text-green-400');
+                    } else {
+                        newsletterStatus.textContent = 'Por favor, insira um email válido.';
+                        newsletterStatus.classList.remove('text-green-400');
+                        newsletterStatus.classList.add('text-red-400');
+                    }
+                });
+            }
+
+            const animateCounter = (element, targetValue, duration) => {
+                let currentValue = 0;
+                const increment = targetValue / (duration / 10);
+                
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= targetValue) {
+                        element.textContent = targetValue;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(currentValue);
+                    }
+                }, 10);
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = parseFloat(entry.target.getAttribute('data-delay')) || 0;
+                        
+                        setTimeout(() => {
+                            entry.target.classList.add('is-visible');
+                        }, delay * 1000);
+                        
+                        if (entry.target.contains(yearsOfExperienceCounter) && yearsOfExperienceCounter.textContent === '0') {
+                             setTimeout(() => {
+                                 animateCounter(yearsOfExperienceCounter, 3, 1500); 
+                             }, 1500); 
+                        }
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+            
+        });
+    </script>
+</body>
+</html>
