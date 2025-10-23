@@ -30,6 +30,7 @@ body {
     background-clip: text;
     color: transparent;
 }
+
 .primary-icon {
     color: var(--color-icon); 
 }
@@ -120,4 +121,21 @@ body {
 }
 .contact-icon {
     color: var(--color-icon);
+}
+
+@media screen and (min-width: 1400px) {
+    #highlights {
+        align-content: center;
+        height: 34vh;
+    }
+
+    #servicos h2{
+        margin-top: -2%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #logo  {
+        display: none;
+    }
 }
